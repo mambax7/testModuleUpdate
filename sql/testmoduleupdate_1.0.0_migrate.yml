@@ -1,0 +1,181 @@
+testmoduleupdate_categories:
+    options: 'ENGINE=InnoDB'
+    columns: 
+        -
+            name: cat_id
+            attributes: ' INT(8) UNSIGNED NOT NULL AUTO_INCREMENT '
+        -
+            name: cat_name
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: cat_logo
+            attributes: ' VARCHAR(100) NOT NULL DEFAULT '''''''' '
+        -
+            name: cat_created
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: cat_submitter
+            attributes: ' INT(8) NOT NULL DEFAULT ''0'' '
+    keys:
+        PRIMARY:
+            columns: cat_id
+            unique: true
+testmoduleupdate_articles:
+    options: 'ENGINE=InnoDB'
+    columns: 
+        -
+            name: art_id
+            attributes: ' INT(8) UNSIGNED NOT NULL AUTO_INCREMENT '
+        -
+            name: art_cat
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: art_title
+            attributes: ' VARCHAR(200) NOT NULL DEFAULT '''''''' '
+        -
+            name: art_descr
+            attributes: ' MEDIUMTEXT NOT NULL '
+        -
+            name: art_img
+            attributes: ' VARCHAR(200) NULL DEFAULT '''''''' '
+        -
+            name: art_status
+            attributes: ' INT(1) NOT NULL DEFAULT ''0'' '
+        -
+            name: art_file
+            attributes: ' VARCHAR(200) NOT NULL DEFAULT '''''''' '
+        -
+            name: art_ratings
+            attributes: ' DOUBLE(10 2) NOT NULL DEFAULT ''0.00'' '
+        -
+            name: art_votes
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: art_created
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: art_submitter
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+    keys:
+        PRIMARY:
+            columns: art_id
+            unique: true
+testmoduleupdate_testfields:
+    options: 'ENGINE=InnoDB'
+    columns: 
+        -
+            name: tf_id
+            attributes: ' INT(8) UNSIGNED NOT NULL AUTO_INCREMENT '
+        -
+            name: tf_text
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_textarea
+            attributes: ' TEXT NOT NULL '
+        -
+            name: tf_dhtml
+            attributes: ' TEXT NOT NULL '
+        -
+            name: tf_checkbox
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_yesno
+            attributes: ' INT(1) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_selectbox
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_user
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_color
+            attributes: ' VARCHAR(7) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_imagelist
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_urlfile
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_uplimage
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_uplfile
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_textdateselect
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_selectfile
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_password
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_country_list
+            attributes: ' VARCHAR(3) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_language
+            attributes: ' VARCHAR(100) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_radio
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_status
+            attributes: ' INT(1) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_datetime
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_combobox
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_comments
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_ratings
+            attributes: ' DOUBLE(10 2) NOT NULL DEFAULT ''0.00'' '
+        -
+            name: tf_votes
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tf_uuid
+            attributes: ' VARCHAR(45) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_ip
+            attributes: ' VARCHAR(16) NOT NULL DEFAULT '''''''' '
+        -
+            name: tf_reads
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+    keys:
+        PRIMARY:
+            columns: tf_id
+            unique: true
+testmoduleupdate_ratings:
+    options: 'ENGINE=InnoDB'
+    columns: 
+        -
+            name: rate_id
+            attributes: ' INT(8) UNSIGNED NOT NULL AUTO_INCREMENT '
+        -
+            name: rate_itemid
+            attributes: ' INT(8) NOT NULL DEFAULT ''0'' '
+        -
+            name: rate_source
+            attributes: ' INT(8) NOT NULL DEFAULT ''0'' '
+        -
+            name: rate_value
+            attributes: ' INT(1) NOT NULL DEFAULT ''0'' '
+        -
+            name: rate_uid
+            attributes: ' INT(8) NOT NULL DEFAULT ''0'' '
+        -
+            name: rate_ip
+            attributes: ' VARCHAR(60) NOT NULL DEFAULT '''''''' '
+        -
+            name: rate_date
+            attributes: ' INT(8) NOT NULL DEFAULT ''0'' '
+    keys:
+        PRIMARY:
+            columns: rate_id
+            unique: true
